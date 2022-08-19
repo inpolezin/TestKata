@@ -38,6 +38,8 @@ public class Main {
                 case "/":
                     arabResult = Integer.parseInt(firstNum) / Integer.parseInt(secondNum);
                     break;
+                default:
+                    throw new InputException("Ошибка");
             }
             System.out.println(arabResult);
 
@@ -58,6 +60,8 @@ public class Main {
                 case "/":
                     arabResult = rnc.fromRoman(firstNum) / rnc.fromRoman(secondNum);
                     break;
+                default:
+                    throw new InputException("Ошибка");
             }
 
             if (arabResult < 0) throw new InputException("Ошибка");
