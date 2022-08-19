@@ -19,6 +19,8 @@ public class Main {
         String secondNum = input.split("\\s+")[2];
         String operation = input.split("\\s+")[1];
 
+        if (input.split("\\s+").length > 3) throw new InputException("Ошибка");
+
         if (isNumeric(firstNum) && isNumeric(secondNum)) {
 
             if (Integer.parseInt(firstNum) > 10 || Integer.parseInt(secondNum) > 10) throw new InputException("Ошибка");
